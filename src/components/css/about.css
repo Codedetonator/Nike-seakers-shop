@@ -1,0 +1,76 @@
+
+.color__blue {
+  color: #29b6f6;
+}
+.color__green {
+  color: #9ccc65;
+}
+.color__purple {
+  color: #ba68c8;
+}
+.color__cyan {
+  color: #4dd0e1;
+}
+.color__red {
+  color: #ef5350;
+}
+.aboutme__content {
+  height: 100vh;
+  color: white;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.aboutme__card {
+  perspective: 150rem;
+  height: 20rem;
+  width: 30rem;
+  position: relative;
+}
+.card__side {
+  height: 15rem;
+  transition: all 0.8s ease;
+  position: absolute;
+  top: 0;
+  left: 0;
+  margin: auto;
+  width: 30rem;
+  backface-visibility: hidden;
+  border-radius: 3px;
+  overflow: hidden;
+  box-shadow: 0 1.5rem 4rem rgba(0, 0, 0, 0.4);
+}
+.card__side--front {
+  background-color: #1c1c1c;
+}
+.card__side--back {
+  transform: rotateY(180deg);
+  background-color: #1c1c1c;
+}
+.aboutme__card:hover .card__side--front {
+  transform: rotateY(-180deg);
+}
+.aboutme__card:hover .card__side--back {
+  transform: rotateY(0deg);
+}
+.card__cont {
+  height: 15rem;
+  background-color: #1c1c1c;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.card__cta {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 90%;
+  color: white;
+}
+.card__cta p {
+  margin-left: 1rem;
+}
+.card__cta p > .aboutme__space {
+  margin-left: 2rem;
+}

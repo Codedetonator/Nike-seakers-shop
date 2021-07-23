@@ -1,0 +1,139 @@
+.pay__container {
+  display: block;
+  max-width: 480px;
+  margin: 40px auto;
+}
+.pay__modal {
+  background: #fff;
+  border-radius: 3px;
+  overflow: hidden;
+}
+.pay__modal .pay__form .pay__form-row {
+  display: flex;
+  flex-direction: row;
+  margin: 0 0 30px;
+}
+.pay__modal .pay__form .pay__form-row:last-child {
+  margin: 0;
+}
+.pay__modal .pay__form .pay__form-row:last-child .pay__input-group {
+  width: 75%;
+  margin: 0 15px 0 0;
+}
+.pay__modal .pay__form .pay__form-row:last-child .pay__input-group:last-child {
+  width: 25%;
+  margin: 0 0 0 15px;
+}
+.pay__modal .pay__form .pay__input-group {
+  width: 100%;
+}
+.pay__modal .pay__form label {
+  display: block;
+  width: 100%;
+  margin: 0 0 10px;
+  color: #00a6ea;
+  font-size: 12px;
+  font-weight: 700;
+  letter-spacing: 1px;
+  text-transform: uppercase;
+}
+.pay__modal .pay__form input {
+  outline: none;
+  display: block;
+  background: rgba(0,0,0,0.1);
+  width: 100%;
+  margin: 0;
+  border: 0;
+  border-radius: 3px;
+  padding: 15px;
+  color: #999;
+  font-size: 12px;
+  font-weight: 700;
+  box-sizing: border-box;
+}
+.pay__modal .pay__header {
+  background: #00a6ea;
+  padding: 30px;
+  text-align: center;
+}
+.pay__modal .pay__header h1 {
+  margin: 0 0 15px;
+  color: #fff;
+  font-size: 14px;
+  font-weight: 700;
+  letter-spacing: 1px;
+  text-transform: uppercase;
+}
+.pay__modal .pay__header .pay__card-type {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+}
+.pay__modal .pay__header .pay__card-type .pay__card {
+  position: relative;
+  width: 25%;
+  min-width: 54px;
+  text-align: center;
+  transition: 0.3s ease;
+  }
+.pay__modal .pay__header .pay__card-type .pay__card.pay__active:after {
+  display: block;
+  bottom: -30px;
+}
+.pay__modal .pay__header .pay__card-type .pay__card:after {
+  content: "";
+  position: absolute;
+  bottom: -60px;
+  left: 50%;
+  margin: 0 0 0 -10px;
+  border-right: 10px solid transparent;
+  border-left: 10px solid transparent;
+  border-bottom: 10px solid #fff;
+  transition: 0.3s ease;
+}
+.pay__modal .pay__header .pay__card-type .pay__card img {
+  display: inline-block;
+}
+.pay__modal .pay__header .pay__card-type li {
+  display: inline-block;
+  margin: 0 10px;
+}
+.pay__modal .pay__content {
+  padding: 30px;
+}
+.pay__modal .pay__footer .pay__button {
+  outline: none;
+  display: block;
+  background: #e39c14;
+  width: 100%;
+  border: 0;
+  padding: 20px 30px;
+  color: #fff;
+  font-weight: 700;
+  letter-spacing: 1px;
+  text-transform: uppercase;
+  cursor: pointer;
+}
+.pay__info {
+  width: 300px;
+  margin: 50px auto;
+  text-align: center;
+}
+.pay__info h1 {
+  margin: 0 0 15px;
+  padding: 0;
+  font-size: 24px;
+  font-weight: 400;
+  color: #333;
+}
+.pay__info span {
+  color: #666;
+  font-size: 12px;
+}
+.pay__info span a {
+  color: #000;
+  text-decoration: none;
+}
+.pay__info span .fa {
+  color: #00a6ea;
+}

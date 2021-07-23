@@ -1,0 +1,518 @@
+ /*
+html,
+body,
+#app {
+  height: 100%;
+}
+*/  
+.nike-logo {
+  width: 40px;
+  height: 40px;
+  padding: 10px 10px 0px 10px;
+}
+
+.background-logo {
+  position: absolute;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-position: center center;
+  background-size: cover;
+  margin: 0 auto;
+  background-image: url("https://raw.githubusercontent.com/rgylling/assets/master/nike-bg.png");
+  background-repeat: no-repeat;
+  z-index: 0;
+  opacity: 0.4;
+}
+
+.random-box {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  width: 100%;
+  height: 100%;
+  background-color: #cb364f;
+  box-shadow: 0px 0px 5px 2px rgba(0, 0, 0, 0.3);
+  clip-path: polygon(0% 0, 85% 100%, 0 100%);
+  z-index: -1;
+}
+
+.another-random-box {
+  position: absolute;
+  height: 100%;
+  width: 100%;
+  background-color: white;
+  top: 0;
+  left: 0;
+  z-index: 0;
+  box-shadow: 0px 0px 10px 2px rgba(0, 0, 0, 0.5);
+  clip-path: polygon(0% 0, 65% 100%, 0 100%);
+}
+
+.home__card {
+  width: 300px;
+  height: 500px;
+  box-shadow: 0px 3px 5px 2px rgba(0, 0, 0, 0.2);
+  padding: 0px 30px;
+  background: linear-gradient(
+    180deg,
+    rgba(74, 79, 103, 1) 20%,
+    rgba(35, 35, 44, 1) 100%
+  );
+  position: relative;
+}
+
+.home__inner {
+  width: 480px;
+  height: 100%;
+  max-height: 300px;
+  background-image: url("https://raw.githubusercontent.com/rgylling/assets/master/shoe.png");
+  background-size: contain;
+  background-repeat: no-repeat;
+  background-position: center;
+  position: absolute;
+  top: -84px;
+  left: -80px;
+  right: 0;
+  bottom: 0;
+  margin: 0 auto;
+  z-index: 1;
+  transform: rotate(-15deg);
+  filter: drop-shadow(0px 6px 7px rgba(34, 34, 34, 0.9)) brightness(110%)
+    saturate(150%);
+}
+
+.home__button {
+  border-radius: 50px;
+  width: 60px;
+  height: 40px;
+  font-size: 30px;
+  background-color: #f63854;
+  border: none;
+  color: white;
+  line-height: 0;
+}
+
+.home__product-name {
+  font-weight: 700;
+  letter-spacing: -2px;
+  position: relative;
+  z-index: 1;
+  font-size: 40px;
+}
+
+.home__product-number {
+  font-size: 100px;
+  color: rgba(64, 67, 89, 0.6);
+  margin: 0px;
+  padding-bottom: 60px;
+  font-weight: 800;
+  top: -25px;
+  position: relative;
+}
+
+.home__product-air{
+  position: absolute;
+  z-index: 0;
+  color: rgba(47, 49, 62, 0.6);
+  font-size: 150px;
+  font-weight: 800;
+  margin: 0;
+  top: -60px;
+  left: 12px;
+  background: -webkit-linear-gradient(
+    rgba(47, 49, 62, 0.6) 60%,
+    rgba(47, 49, 62, 0.8) 100%
+  );
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+.home__product-price {
+  font-weight: 700;
+  letter-spacing: -2px;
+  position: relative;
+  z-index: 1;
+  margin: 0px;
+}
+
+.home__container {
+  display: flex;
+  justify-content: center;
+  align-content: center;
+  flex-direction: column;
+  flex: 1 1 100%;
+  margin: auto;
+  width: 100%;
+  height: 100%;
+  align-items: center;
+  position: relative;
+}
+
+.row {
+  display: flex;
+  flex: 1 1 auto;
+  min-width: 0;
+  position: relative;
+}
+
+.flex {
+  flex: 1 1 auto;
+  max-width: 100%;
+}
+
+.full-width {
+  flex-basis: 100%;
+  flex-grow: 0;
+  max-width: 100%;
+}
+
+.shrink {
+  flex-grow: 0 !important;
+  flex-shrink: 1 !important;
+}
+
+.pad {
+  padding: 45px 0;
+}
+
+.align-center {
+  align-content: center;
+}
+
+.pad-bottom {
+  padding: 0 0 20px 0;
+}
+
+
+/*/////////////////////////////////////////////////////////////////////////////////////////// */
+
+
+
+.shoesdesign, /*Selection of the two cards*/
+.shoesdesign2{
+  width: 340px;
+  height: 550px;
+  background-color: #fff; /*Background color of the cards*/
+  border-radius: 30px; /*Rounding the border of the cards*/
+  position: absolute; /*An element with position: absolute; is positioned relative to the nearest positioned ancestor (instead of positioned relative to the viewport, like fixed).*/
+  left: 35%;
+  overflow: hidden;
+  z-index: 0; /*Specifies the stack order of an element*/
+  box-shadow: 10px 10px 30px rgba(0, 0, 0, 0.4);
+  transition: .5s; /*The animation when the page is loaded for first time*/
+}
+.shoesdesign:hover{
+  margin-top: -30px; /*Moves the first card 30 px up when hovering with the mouse*/
+  box-shadow: 0 30px 50px black;
+}
+.shoesdesign:before, /*In CSS, ::before creates a pseudo-element that is the first child of the selected element. It is often used to add cosmetic content to an element with the content property. It is inline by default.*/
+.shoesdesign2:before{
+  content: ''; /*Inserts content (space)*/
+  position: absolute;
+  top: -25%; /*Height of the background color inside of the card (orange and pink)*/
+  left: 0;
+  width: 100%;
+  height: 90%;
+  background: linear-gradient(160deg, #e72b3b, #d5710b); /*Color degradation of background from initial color to final*/
+  border-top-left-radius: 30px;
+  border-top-right-radius: 30px;
+  transform: skewY(-10deg); /*Turn the background ten degrees clockwise*/
+  z-index: -1;
+}
+.shoesdesign:after, /*In CSS, ::after creates a pseudo-element that is the last child of the selected element. It is often used to add cosmetic content to an element with the content property. It is inline by default.*/
+.shoesdesign2:after{
+  content: 'Nike'; /*The word Nike appears in the card*/
+  position: absolute;
+  bottom: 30%;
+  left: -7%;
+  transform: skewY(-10deg);
+  font-size: 10.5rem;
+  font-weight: bolder;
+  color: #cb5614; /*Bage Color of the text*/
+  margin: 0;
+  padding: 0;
+  z-index: -1;
+}
+.nike{
+  position: relative; /*An element with position: relative; is positioned relative to its normal position. Used to move vertically the cards*/
+  width: 100%;
+  height: 100%;
+}
+
+/*Configuration of the logo*/
+.home2__logo{
+  width: 80px;
+}
+
+.home2__logo img {
+  margin: 20px 20px;
+  width: 100%;
+  color: white;
+}
+.text { /*Configuration of the slogans*/
+  margin-left: 10px;
+  margin-top: 15px;
+  z-index: 10;
+}
+.text p { /*Configuration of the slogans*/
+  font-size: 74px;
+  font-weight: bolder;
+  line-height: 60px;
+  text-transform: uppercase;
+  color: white;
+  margin: 0;
+}
+.home2__nike-shoes { /*Configuration of position of the slogans*/
+  z-index: 1;
+  position: relative;
+  width: 100%;
+  height: 300px;
+}
+.home2__nike-shoes img {
+  position: absolute;
+  top: -10%;
+  left: -7%;
+  width: 100%;
+  transform: rotate(-32deg); /*Turn the shoes images 32 degrees clockwise*/
+}
+.home2__nike-shoes img{ /*Configuration of the nike image*/
+  width: 160%;
+  left: -38%;
+  top: -20%;
+}
+.home2__price { /*Configuration of the prices*/
+  position: absolute;
+  bottom: 20%;
+  right: 3%;
+  line-height: 24px; /*Distance between the two prices*/
+  z-index: 3;
+}
+/*Configuration of the prices*/
+.home2__price h3 {
+  margin: 0;
+  font-size: 16px;
+  text-decoration: line-through;
+  color: #a3a2a2;
+  text-align: center;
+}
+.home2__price h2 {
+  margin: 0;
+  color: #eca32f;
+  font-size: 35px;
+  text-align: center;
+}
+.home2__button {
+  position: relative;
+  z-index: 5;
+  transition: 1s;
+}
+.home2__button a {
+  position: absolute;
+  bottom: 45px;
+  background: linear-gradient(to right, #e72b3b, #d5710b 80%); /*Degradation of the color of the buttons*/
+  color: white; /*Color of the text inside the button*/
+  text-transform: uppercase;
+  text-decoration: none;
+  padding: 10px 10px;
+  border-radius: 30px;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 50%;
+  text-align: center;
+  font-weight: 100;
+  transition: 1s;
+}
+
+.home2__button:hover a {
+  padding: 10px 21px;
+}
+.home2__mens { /*Configuration of the final banner*/
+  position: absolute;
+  bottom: -1.3%;
+  text-align: center;
+  left: 50%;
+  transform: translate(-50%);
+  color: #9f9b9b;
+  font-size: 12px;
+  text-transform: uppercase;
+  z-index: 3;
+}
+
+
+
+
+@import url('https://fonts.googleapis.com/css?family=Raleway');
+
+.home2__ul {
+  display: grid;
+  text-decoration: none;
+  grid-template-columns: repeat(1,1fr);
+  transform-origin: top right;
+  transform: skewY(-4.398705355deg);
+  margin: 0 6.4vw 0 28%;
+}
+.home2__li{
+  text-decoration: none;
+  transform-origin: top left;
+  transform: skewY(4.398705355deg) rotatez(14.03624deg);
+  padding-top: 150%;
+  z-index: 1;
+  transition-property: z-index;
+  transition-duration: .3s;
+}
+.details{
+  position: absolute;
+  z-index: 2;
+  width: 98%;
+  height: 95%;
+  top: 0;
+  background-color: #DADDDF;
+  border-radius: 2vw;
+  box-shadow: inset 0px 0px 0px 7vw #FCF8F4;
+  box-sizing: border-box;
+  webkit-filter: drop-shadow(2px 6px 3px rgba(0, 0, 0, 0.4));
+  filter: drop-shadow(2px 6px 3px rgba(0, 0, 0, 0.4));
+  transform: rotate(0deg) translate(0, 0);
+  transition-property: transform;
+  transition-duration: .3s;
+}
+
+.home2__h2, .home2__p, .home2__img {
+  position: absolute;
+  font-size: small;
+  z-index: 4;
+}
+
+.home2__p{
+ font-size:1.4em; 
+  background-color: #FCF8F4;
+  padding: 2% 2.5% 2% 2.5%;
+}
+.home2__p:nth-child(2n){
+  top: 3%;
+  left: 5%;
+}
+.home2__p:nth-child(2n+1){
+  transform: rotatez(180deg);
+  bottom: 3%;
+  right: 5%;
+}
+.home2__h2{
+  text-align: center;
+  width: 122%;
+  left: -11%;
+  top: 46%;
+  transform: rotatez(-45deg);
+  background-color: #FCF8F4;
+  line-height: 140%;
+  transition-property: top;
+  transition-duration: .3s;
+}
+.home2__img{
+  width: 84%;
+  top: 50%;
+  left: 50%;
+}
+.home2__img:nth-child(2n){
+  transform: translateX(-30%) translateY(5%) rotatez(135deg);
+  transition-property: width,transform;
+  transition-duration: .3s;
+}
+.home2__img:nth-child(2n+1){
+  transform: translateX(-70%) translateY(-105%) rotatez(-45deg);
+  transition-property: width,transform;
+  transition-duration: .3s;
+}
+
+.home2__li:hover{ 
+  z-index: 4;
+}
+.home2__li:hover .home2__h2{ 
+  top: 64%;
+}
+.home2__li:hover .details{ 
+  transform: rotate(-14.03624deg) translate(5.5%, 15%) scale(1.5);
+}
+.home2__li:hover .home2__img:nth-child(2n){ 
+  width: 60%;
+  transform: translateX(-15%) translateY(60%) rotatez(135deg);
+}
+.home2__li:hover .home2__img:nth-child(2n+1){ 
+  width: 120%;
+  transform: translateX(-65%) translateY(-75%) rotatez(-45deg);
+}
+@media (min-width:300px) { 
+  body{
+    font-size: 2.75vw;
+  }
+  .home2__ul {
+    grid-template-columns: repeat(2,1fr);
+    grid-column-gap: 3vw;
+    margin: 0 3.9vw 0 15vw;
+  }
+  .details{
+    box-shadow: inset 0px 0px 0px 4vw #FCF8F4;
+  }
+}
+
+@media (min-width:600px) { 
+  body{
+    font-size: 1.95vw;
+  }
+  .home2__ul {
+    grid-template-columns: repeat(3,1fr);
+    grid-column-gap: 2vw;
+    margin: 0 2.8vw 0 10vw;
+  }
+  .details{
+    box-shadow: inset 0px 0px 0px 2.8vw #FCF8F4;
+  }
+}
+
+@media (min-width:900px) { 
+  body{
+    font-size: 1.5vw;
+  }
+  .home2__ul {
+    grid-template-columns: repeat(4,1fr);
+    grid-column-gap: 1.5vw;
+    margin: 0 2.2vw 0 8vw;
+  }
+  .details{
+    box-shadow: inset 0px 0px 0px 2.2vw #FCF8F4;
+  }
+}
+
+@media (min-width:1200px) { 
+  body{
+    font-size: 1.25vw;
+  }
+  .home2__ul {
+    grid-template-columns: repeat(5,1fr);
+    grid-column-gap: 1vw;
+    margin: 0 1.8vw 0 6.5vw;
+  }
+  .details {
+    box-shadow: inset 0px 0px 0px 1.8vw #FCF8F4;
+  }
+}
+
+@media (min-width:1500px) { 
+  body{
+    font-size: 1vw;
+  }
+  .home2__ul {
+    grid-template-columns: repeat(6,1fr);
+    grid-column-gap: 1vw;
+    margin: 0 1.5vw 0 5.5vw;
+  }
+  .details{
+    box-shadow: inset 0px 0px 0px 1.5vw #FCF8F4;
+  }
+}
+
